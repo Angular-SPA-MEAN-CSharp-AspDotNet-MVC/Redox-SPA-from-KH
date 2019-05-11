@@ -4,12 +4,20 @@
   "description": "This project is used for the take home SPA exercise of Redox.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "\u0016https://github.com/Angular-SPA-MEAN-CSharp-AspDotNet-MVC/Redox-SPA-from-KH.git"
+    "url": "https://github.com/Angular-SPA-MEAN-CSharp-AspDotNet-MVC/Redox-SPA-from-KH.git"
   },
   "author": "KH",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
 }
