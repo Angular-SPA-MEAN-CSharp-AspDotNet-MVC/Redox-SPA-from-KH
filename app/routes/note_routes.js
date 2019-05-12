@@ -22,9 +22,6 @@ module.exports = function(app, db) {
       }
     );
   });
-  app.post("/source", (req, res) => {
-    res.send(sourceRes);
-  });
 
   let messageRes = [];
   db.serialize(() => {
@@ -39,7 +36,55 @@ module.exports = function(app, db) {
       }
     );
   });
-  app.post("/message", (req, res) => {
+
+  let msgScrJoinRes = [];
+  db.serialize(() => {
+    db.each(
+      `SELECT message.message, message.status,
+              source.name, source.environment,
+              source.id, message.source_id
+       FROM message
+       JOIN source On
+          message.source_id = source.id
+     `,
+      (err, row) => {
+        if (err) {
+          console.error(err.message);
+        }
+        msgScrJoinRes.push(row);
+      }
+    );
+  });
+
+  app.get("/source", (req, res) => {
+    res.send(sourceRes);
+  });
+
+  app.get("/message", (req, res) => {
     res.send(messageRes);
+  });
+
+  app.get("/source/:id", (req, res) => {
+    const id = req.params.id;
+    let sourceWithIDRes = sourceRes.filter(function(item) {
+      return item.id === id;
+    });
+    res.send(sourceWithIDRes);
+  });
+
+  app.get("/message/:mid", (req, res) => {
+    const mid = req.params.mid;
+    let messageWithIDRes = messageRes.filter(function(item) {
+      return item.id === mid;
+    });
+    res.send(messageWithIDRes);
+  });
+
+  app.get("/source/:id/message", (req, res) => {
+    const id = req.params.id;
+    let innerJoinRes = msgScrJoinRes.filter(item => {
+      return item.id === id;
+    });
+    res.send(innerJoinRes);
   });
 };
