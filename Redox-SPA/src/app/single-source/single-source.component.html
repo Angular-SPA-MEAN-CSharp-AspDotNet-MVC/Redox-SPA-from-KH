@@ -1,3 +1,6 @@
-<p>
-  single-source works!
-</p>
+<div *ngIf="oneSource">
+  <h2>Details of this Source</h2>
+  <span>{{ oneSource.name | uppercase }}</span> <br />
+  <span>{{ oneSource.environment }}</span> <br />
+  <span>{{ oneSource.encoding }}</span>
+</div>

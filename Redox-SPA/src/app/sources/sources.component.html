@@ -1,6 +1,8 @@
-<h2>Source List. Current just show up the name field:</h2>
+<h2>Source List. Currently, I just show up the name field:</h2>
 <ul>
-  <li *ngFor="let oneSource of sources">
+  <li *ngFor="let oneSource of sources" (click)="onSelect(oneSource)">
     <span>{{ oneSource.name }}</span>
   </li>
 </ul>
+
+<app-single-source [oneSource]="selectedSource"></app-single-source>

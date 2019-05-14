@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { Source } from "../source";
 
 @Component({
@@ -7,6 +7,7 @@ import { Source } from "../source";
   styleUrls: ["./single-source.component.css"]
 })
 export class SingleSourceComponent implements OnInit {
+  /*
   source: Source = {
     id: "4e7cb748-9d37-4705-9d16-bd68a80afc39",
     name: "Chicago University Health System",
@@ -16,6 +17,9 @@ export class SingleSourceComponent implements OnInit {
     updated_at: "2019-03-05 21:04:27"
     //,deleted_at: null
   };
+  */
+
+  @Input() oneSource: Source;
 
   constructor() {}
 
