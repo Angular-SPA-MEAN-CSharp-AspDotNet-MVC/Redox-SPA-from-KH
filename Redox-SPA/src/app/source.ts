@@ -5,4 +5,5 @@ export class Source {
   encoding: string;
   created_at: string;
   updated_at: string;
+  deleted_at: any;
 }

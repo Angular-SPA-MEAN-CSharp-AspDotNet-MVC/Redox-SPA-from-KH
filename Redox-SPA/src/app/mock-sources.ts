@@ -11,7 +11,8 @@ export const SOURCES: Source[] = [
     environment: "staging",
     encoding: "utf8",
     created_at: "2019-03-05 21:04:27",
-    updated_at: "2019-03-05 21:04:27"
+    updated_at: "2019-03-05 21:04:27",
+    deleted_at: null
   },
   {
     id: "f7516443-c498-4493-9acc-c854ca2e873a",
@@ -19,7 +20,8 @@ export const SOURCES: Source[] = [
     environment: "development",
     encoding: "latin1",
     created_at: "2019-03-05 21:04:27",
-    updated_at: "2019-03-05 21:04:27"
+    updated_at: "2019-03-05 21:04:27",
+    deleted_at: null
   },
   {
     id: "4e7cb748-9d37-4705-9d16-bd68a80afc39",
@@ -27,7 +29,8 @@ export const SOURCES: Source[] = [
     environment: "production",
     encoding: "latin1",
     created_at: "2019-03-05 21:04:27",
-    updated_at: "2019-03-05 21:04:27"
+    updated_at: "2019-03-05 21:04:27",
+    deleted_at: null
   },
   {
     id: "f4f96516-c5ec-43bb-ba21-da1f35dacf8a",
@@ -35,9 +38,8 @@ export const SOURCES: Source[] = [
     environment: "development",
     encoding: "utf8",
     created_at: "2019-03-05 21:04:27",
-    updated_at: "2019-03-05 21:04:27"
-    //,
-    //"deleted_at": null
+    updated_at: "2019-03-05 21:04:27",
+    deleted_at: null
   },
   {
     id: "914d66ba-4368-450a-870b-d8fcd7fd34d6",
@@ -45,9 +47,8 @@ export const SOURCES: Source[] = [
     environment: "production",
     encoding: "utf8",
     created_at: "2019-03-05 21:04:27",
-    updated_at: "2019-03-05 21:04:27"
-    //,
-    //"deleted_at": null
+    updated_at: "2019-03-05 21:04:27",
+    deleted_at: null
   },
   {
     id: "bd5ab29c-af66-44c0-b2e9-f36eee05af97",
@@ -55,8 +56,7 @@ export const SOURCES: Source[] = [
     environment: "production",
     encoding: "latin1",
     created_at: "2019-03-05 21:08:27",
-    updated_at: "2019-03-05 21:08:27"
-    //,
-    //"deleted_at": null
+    updated_at: "2019-03-05 21:08:27",
+    deleted_at: null
   }
 ];
