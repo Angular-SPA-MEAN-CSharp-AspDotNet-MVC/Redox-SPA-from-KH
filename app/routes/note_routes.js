@@ -56,6 +56,16 @@ module.exports = function(app, db) {
     );
   });
 
+  // Important! This portion is used to allow CORS (Cross Origin) request
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+
   app.get("/source", (req, res) => {
     res.send(sourceRes);
   });
